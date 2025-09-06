@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Leaders School web site</title>
+         <link rel="stylesheet" href="mycsscode.css">
+               
+
+          <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: white;
+      text-align: center;
+    }
+    .course {
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 10px;
+      display: inline-block;
+      width: 180px;
+      background: #fff;
+    }
+    .green { border-color: green; background: #D9FAE0; }
+    .red   { border-color: red;   background:#FAD9D9; }
+  </style>
+  
+    </head>
+    <body>
+         <header>
+      <div class="container" >
+            <div class="logo">
+                <i class="fas fa-school"></i>
+                <h1>leaders school</h1>
+                    <div class="logo-img">
+                        <img src="llogo.jpg" alt="Leaders School Logo">
+                    </div>            </div>
+        </div>
+        
+        <nav>
+            <ul>
+                <li style="background-color: graytext;border-radius: 5px;"><a href="index.html">Main page</a></li>
+                        <li style="background-color: graytext ;border-radius: 5px;"><a href="information.html">About school</a></li>
+                        <li style="background-color: graytext; border-radius: 5px;"><a href="teachers.html">Teachers</a></li>
+                        <li style="background-color: graytext;border-radius: 5px;"><a href="courses.html">Courses</a></li>
+                        <li style="background-color: graytext;border-radius: 5px;"><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+        <section class="banner" style=" background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('cour.jpg') center/cover no-repeat;">
+        <h2>Our Courses </h2>
+   
+    </section>
+    </header>   
+        
+        
+        
+        
+        
+        
+        
+   
+           <h1>School Courses</h1>
+
+  <div id="courses"></div>
+
+  <script>
+    const data = [
+      { name: "Arabic", students: 3 },
+      { name: "English", students: 6 },
+      { name: "Math", students: 5 },
+      { name: "Science", students: 9 },
+      { name: "Art", students: 2 }
+    ];
+
+    const container = document.getElementById("courses");
+
+    data.forEach(c => {
+      const div = document.createElement("div");
+      div.className = "course";
+      
+
+      if (c.students <= 5) {
+        div.classList.add("green");
+      } else {
+        div.classList.add("red");
+      }
+
+      div.innerHTML = `<h3>${c.name}</h3><p>${c.students} students</p>`;
+      container.appendChild(div);
+    });
+  </script>
+
+        
+        
+        <footer><div class="container">
+         <table>
+             <div class="footer-content">
+             <tr><td>
+        
+            
+                <div class="footer-section">
+                    <h3>About School</h3>
+                    <p>Leaders School is a leading educational institution that
+                        aims to provide distinguished education that combines 
+                        authenticity and modernity.</p>
+                </div>
+            </td>
+               
+            <td>
+                <div class="footer-section">
+                    <h3> URL'S</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Main</a></li>
+                        <li><a href="information.html">About school</a></li>
+                        <li><a href="teachers.html">Teachers</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </div>
+            </td>
+                </tr>
+                <tr><td>
+                <div class="footer-section">
+                    <h3>Conatact Info</h3>
+                    <p> Location : Amman city , Mekkah Street</p>            
+                    <p>Phone number: 0123456789</p>
+                    <p>Email : LeadersSchool@edu.jo </p>
+                </div>
+            
+            
+            <div class="copyright">
+                <p>leaders school ©2025 All rights reserved</p>
+            </div>
+        </div>
+                 </td></tr>
+         </table></div>
+    </footer>
+
+
+    </body>
+</html>
